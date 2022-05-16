@@ -614,7 +614,7 @@ p {
 }
 @media screen and (max-width: 428px) {
   .m-opening__word {
-    padding-top: calc(100vh - var(--vh, 1vh) * 100);
+    padding-top: calc(var(--vh, 1vh) * 100 - 100vh);
   }
 }
 .m-opening__word-asa {
