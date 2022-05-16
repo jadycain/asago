@@ -33,6 +33,7 @@ body {
   height: 100%;
   width: 100%;
   position: fixed;
+  overflow: hidden;
 }
 
 a {
@@ -168,6 +169,7 @@ p {
   z-index: 10;
   opacity: 0;
   transition: 0.2s;
+  left: 0;
 }
 @media screen and (max-width: 1024px) {
   .l-header {
@@ -643,6 +645,7 @@ p {
   justify-content: center;
   align-items: center;
   background-color: #F8F9F8;
+  min-height: 937px;
 }
 @media (max-device-width: 1024px) and (orientation: landscape) {
   .m-pv {
