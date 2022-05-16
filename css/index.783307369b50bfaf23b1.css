@@ -9,7 +9,6 @@
 /*!****************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/all.scss (2) ***!
   \****************************************************************************************************************/
-@charset "UTF-8";
 * {
   box-sizing: border-box;
   color: #0C160B;
@@ -612,6 +611,11 @@ p {
   justify-content: center;
   align-items: center;
   position: relative;
+}
+@media screen and (max-width: 428px) {
+  .m-opening__word {
+    padding-top: calc(100vh - var(--vh, 1vh) * 100);
+  }
 }
 .m-opening__word-asa {
   padding-right: 20px;
@@ -1365,9 +1369,7 @@ p {
   border-radius: 5px;
   font-weight: 400;
   -webkit-appearance: none;
-  /* Safari 和 Chrome，常用於iOS下移除內建樣式 */
   -moz-appearance: none;
-  /* FireFox */
   appearance: none;
 }
 @media screen and (max-width: 1024px) {
@@ -1398,6 +1400,9 @@ p {
   border: 1px solid #DADADA;
   border-radius: 5px;
   font-weight: 400;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 @media screen and (max-width: 1024px) {
   .m-mail__form-item_msg {
