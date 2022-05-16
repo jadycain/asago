@@ -9,6 +9,7 @@
 /*!****************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/all.scss (2) ***!
   \****************************************************************************************************************/
+@charset "UTF-8";
 * {
   box-sizing: border-box;
   color: #0C160B;
@@ -1363,6 +1364,11 @@ p {
   border: 1px solid #DADADA;
   border-radius: 5px;
   font-weight: 400;
+  -webkit-appearance: none;
+  /* Safari 和 Chrome，常用於iOS下移除內建樣式 */
+  -moz-appearance: none;
+  /* FireFox */
+  appearance: none;
 }
 @media screen and (max-width: 1024px) {
   .m-mail__form-item_name, .m-mail__form-item_email {
