@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="format-detection" content="telephone=no"/>
-    <title>Document</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon"/>
+    <meta name='theme-color' content='#F8F9F8'/>
+    <title>阪森 ASAGO</title>
 
     <!-- Vue 開發模式 -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
@@ -14,7 +16,9 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
 
-<script defer src="./js/index.dcea1f6a872b81fcc1fa.js"></script><link href="./css/index.dcea1f6a872b81fcc1fa.css" rel="stylesheet"></head>
+    
+
+<script defer src="./js/index.a7a39b7b3784a19ac03e.js"></script><link href="./css/index.a7a39b7b3784a19ac03e.css" rel="stylesheet"></head>
 <body>
     <div id="app">
         <div class="wrapper" ref="wrapper">
@@ -35,9 +39,9 @@
             </div>
             <!-- header -->
             <header data-scroll-header class="l-header" id="gotop" :class="{ scrollDown : isScrollDown }">
-                <div class="l-header__logo">
+                <a class="l-header__logo">
                     <img src="img/logo.png" alt="">
-                </div>
+                </a>
                 <ul class="l-header__menu" :class="{ active : isActive }">
                     <li class="l-header__menu-item">
                         <a data-scroll href="#services">Services</a>
@@ -184,14 +188,14 @@
                         </li>
                         <li class="m-mail__form-item">
                             <label class="label" for="email" :class="{ erroLabel : isError }">{{ emailAlert }}</label>
-                            <input class="m-mail__form-item_email" type="email" name="" id="email" placeholder="Email subject" v-model="userEmail" @blur="blur" :class="{ erroInput : isError }">
+                            <input class="m-mail__form-item_email" type="email" name="" id="email" placeholder="email" v-model="userEmail" @blur="blur" :class="{ erroInput : isError }">
                         </li>
                         <li class="m-mail__form-item">
                             <label class="label" for="message">訊息內容</label>
                             <textarea class="m-mail__form-item_msg" placeholder="Leave your message here" id="message" v-model="userMsg"></textarea>
                         </li>
                         <li class="m-mail__form-item">
-                            <button class="m-mail__form-item_submit" :class="{ formCorrect : isCorrect }">Submit</button>
+                            <button @click="sendData" class="m-mail__form-item_submit" :class="{ formCorrect : isCorrect }">Submit</button>
                         </li>
                     </ul>
                 </div>
@@ -219,7 +223,7 @@
                             </div>
                         </div>
                     </div>
-                    <a data-scroll href="#gotop" class="l-footer__gotop">
+                    <a data-scroll href="#gotop" class="l-footer__gotop"  @click="removeHover">
                         <svg width="21" height="24" viewBox="0 0 21 24" fill="none">
                             <path d="M1 10.5L10.5 1M10.5 1L20 10.5M10.5 1V23.5" stroke="#FFB930"/>
                         </svg>
