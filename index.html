@@ -17,16 +17,19 @@
     <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
 
     <script src="https://cdn.jsdelivr.net/npm/vue-router/dist/vue-router.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.10.3/qs.min.js" integrity="sha512-juaCj8zi594KHQqb92foyp87mCSriYjw3BcTHaXsAn4pEB1YWh+z+XQScMxIxzsjfM4BeVFV3Ij113lIjWiC2w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
 
     
 
-<script defer src="./js/index.a02868ab16c018762bfd.js"></script><link href="./css/index.a02868ab16c018762bfd.css" rel="stylesheet"></head>
+<script defer src="./js/index.38b0718d11c8276f2706.js"></script><link href="./css/index.38b0718d11c8276f2706.css" rel="stylesheet"></head>
 <body>
     <div id="app">
         <div class="wrapper" ref="wrapper">
             <!-- opening -->
-            <div class="m-opening" :class="{ complete : isComplete }">
+            <start-component :cloud-Animate="cloudAnimate" :is-Complete="isComplete"></start-component>
+            <!-- <div class="m-opening" :class="{ complete : isComplete }">
                 <div class="m-opening__word">
                     <div class="m-opening__word-asa">
                         <img src="img/asa.svg" alt="">
@@ -39,7 +42,7 @@
                         <img class="m-opening__word-go_cloud" src="img/cloud.svg" alt="">
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- <router-view :cloud-Animate="cloudAnimate"></router-view>
             <router-view v-if="update" name="a"></router-view>
             <button @click="reload()">刷新comp组件</button> -->
@@ -230,7 +233,7 @@
                             </div>
                         </div>
                     </div>
-                    <a data-scroll href="#gotop" class="l-footer__gotop"  :class="{ gotopHover : hoverStyle }" @click="removeHover">
+                    <a data-scroll href="#gotop" class="l-footer__gotop"  :class="{ gotopHover : hoverStyle,  gotopBg : clickStyle}" @touchstart="addHover" @touchend="removeHover">
                         <svg width="21" height="24" viewBox="0 0 21 24" fill="none">
                             <path d="M1 10.5L10.5 1M10.5 1L20 10.5M10.5 1V23.5" stroke="#FFB930"/>
                         </svg>
@@ -242,5 +245,7 @@
             </footer>
         </div> <!-- wrapper end-->
     </div> <!-- app end-->
+    <script type="text/x-template" id="startComponent"></script>
+    <script type="text/x-template" id="mainComponent"></script>
 </body>
 </html>

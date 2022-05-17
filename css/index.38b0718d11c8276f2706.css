@@ -572,6 +572,13 @@ p {
   stroke: #0C160B;
 }
 
+.gotopBg {
+  background-color: #FFB930;
+}
+.gotopBg svg path {
+  stroke: #0C160B;
+}
+
 .l-container {
   display: flex;
   justify-content: center;
