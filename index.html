@@ -23,7 +23,7 @@
 
     
 
-<script defer src="./js/index.68b485a6edd38f5f8765.js"></script><link href="./css/index.68b485a6edd38f5f8765.css" rel="stylesheet"></head>
+<script defer src="./js/index.e37f6feee62b7d341d7f.js"></script><link href="./css/index.e37f6feee62b7d341d7f.css" rel="stylesheet"></head>
 <body>
     <div id="app">
         <div class="wrapper" ref="wrapper">
@@ -202,7 +202,7 @@
                             <textarea class="m-mail__form-item_msg" placeholder="Leave your message here" id="message" v-model="userMsg"></textarea>
                         </li>
                         <li class="m-mail__form-item">
-                            <button @click="sendData" class="m-mail__form-item_submit" :class="{ formCorrect : isCorrect }"  :disabled="isDisabled">Submit</button>
+                            <input type="button" @click="sendData" class="m-mail__form-item_submit" :class="{ formCorrect : isCorrect }"  :disabled="isDisabledFn" value="Submit"></input>
                         </li>
                     </ul>
                 </div>
