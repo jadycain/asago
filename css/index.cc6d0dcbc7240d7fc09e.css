@@ -1455,6 +1455,9 @@ p {
   border-radius: 5px;
   cursor: pointer;
   color: #828782;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 @media screen and (max-width: 428px) {
   .m-mail__form-item_submit {
