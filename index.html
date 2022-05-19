@@ -23,7 +23,7 @@
 
     
 
-<script defer src="./js/index.179207c84363699f8b31.js"></script><link href="./css/index.179207c84363699f8b31.css" rel="stylesheet"></head>
+<script defer src="./js/index.68b485a6edd38f5f8765.js"></script><link href="./css/index.68b485a6edd38f5f8765.css" rel="stylesheet"></head>
 <body>
     <div id="app">
         <div class="wrapper" ref="wrapper">
@@ -43,9 +43,6 @@
                     </div>
                 </div>
             </div> -->
-            <!-- <router-view :cloud-Animate="cloudAnimate"></router-view>
-            <router-view v-if="update" name="a"></router-view>
-            <button @click="reload()">刷新comp组件</button> -->
             <!-- header -->
             <header data-scroll-header class="l-header" id="gotop" :class="{ scrollDown : isScrollDown }">
                 <a @click="refresh" class="l-header__logo">
@@ -198,14 +195,14 @@
                         </li>
                         <li class="m-mail__form-item">
                             <label class="label" for="email" :class="{ erroLabel : isError }">{{ emailAlert }}</label>
-                            <input class="m-mail__form-item_email" type="email" name="" id="email" placeholder="email" v-model="userEmail" @blur="blur" :class="{ erroInput : isError }">
+                            <input class="m-mail__form-item_email" type="email" name="" id="email" placeholder="Email" v-model="userEmail" @blur="blur" :class="{ erroInput : isError }">
                         </li>
                         <li class="m-mail__form-item">
                             <label class="label" for="message">訊息內容</label>
                             <textarea class="m-mail__form-item_msg" placeholder="Leave your message here" id="message" v-model="userMsg"></textarea>
                         </li>
                         <li class="m-mail__form-item">
-                            <button @click="sendData" class="m-mail__form-item_submit" :class="{ formCorrect : isCorrect }">Submit</button>
+                            <button @click="sendData" class="m-mail__form-item_submit" :class="{ formCorrect : isCorrect }"  :disabled="isDisabled">Submit</button>
                         </li>
                     </ul>
                 </div>
@@ -243,6 +240,20 @@
                     </div>
                 </div>
             </footer>
+
+            <!-- modal -->
+            <div class="m-modal" :style="modalStyle">
+                <div class="m-modal__container">
+                    <img class="m-modal__container-img" src="img/check.png" alt="">
+                    <div class="m-modal__container-mainmsg">
+                        <img  src="img/thank.svg" alt="">
+                    </div>
+                    
+                    <P class="m-modal__container-submsg">我們已經收到你的訊息，並將儘速與你聯絡。</P>
+                    <button class="m-modal__container-btn" @click="toggleModal">回到主頁</button>
+                </div>
+            </div>
+
         </div> <!-- wrapper end-->
     </div> <!-- app end-->
 </body>
