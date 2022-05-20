@@ -611,6 +611,11 @@ p {
   background-color: #F8F9F8;
   min-height: 937px;
 }
+@media (min-width: 1024px) and (orientation: landscape) {
+  .m-pv {
+    min-height: 100vh;
+  }
+}
 @media (max-device-width: 1024px) and (orientation: landscape) {
   .m-pv {
     height: 100vw;
