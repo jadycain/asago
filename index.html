@@ -9,20 +9,24 @@
     <title>阪森 ASAGO</title>
 
     <!-- Vue 開發模式 -->
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-    <!-- anime -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-    <!-- AOS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script> -->
 
-    <script src="https://cdn.jsdelivr.net/npm/vue-router/dist/vue-router.js"></script>
+    <!-- Vue 正式上線 -->
+    <script src="vendor/vue.min.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.10.3/qs.min.js" integrity="sha512-juaCj8zi594KHQqb92foyp87mCSriYjw3BcTHaXsAn4pEB1YWh+z+XQScMxIxzsjfM4BeVFV3Ij113lIjWiC2w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- AOS 開發模式-->
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+
+    <!-- AOS 正式上線-->
+    <link rel="stylesheet" href="vendor/aos.css">
+
+    <!-- qs -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.10.3/qs.min.js" integrity="sha512-juaCj8zi594KHQqb92foyp87mCSriYjw3BcTHaXsAn4pEB1YWh+z+XQScMxIxzsjfM4BeVFV3Ij113lIjWiC2w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
     
 
     
 
-<script defer src="./js/index.0abf9a630345265460dd.js"></script><link href="./css/index.0abf9a630345265460dd.css" rel="stylesheet"></head>
+<script defer src="./js/index.c9b9669bd77782056c2f.js"></script><link href="./css/index.c9b9669bd77782056c2f.css" rel="stylesheet"></head>
 <body>
     <div id="app">
         <div class="wrapper" ref="wrapper">
@@ -42,8 +46,8 @@
                     </div>
                 </div>
             </div> -->
-            <!-- header -->
 
+            <!-- header -->
             <header data-scroll-header class="l-header" id="gotop" :class="{ scrollDown : isScrollDown }">
                 <a @click="refresh" class="l-header__logo">
                     <img src="img/logo.png" alt="">
@@ -53,13 +57,13 @@
                         <a data-scroll href="#services">Services</a>
                     </li>
                     <li class="l-header__menu-item">
-                        <a data-scroll href="#projects">Works</a>
+                        <a data-scroll href="#works">Works</a>
                     </li>
                     <li class="l-header__menu-item">
                         <a data-scroll href="#about">About us</a>
                     </li>
                     <li class="l-header__menu-item">
-                        <a data-scroll href="#mail">Contact</a>
+                        <a data-scroll href="#contact">Contact</a>
                     </li>
                 </ul>
                 <div class="l-header__hamburger" :class="{ active : isActive }" @click="toggleHam()" >
@@ -70,7 +74,7 @@
             </header>
 
             <!-- pv -->
-            <div class="m-pv" >
+            <section class="m-pv" >
                 <div class="m-pv__main">
                     <div class="m-pv__main-img">
                         <transition-group tag="div" class="img-slider" :name="back ? 'slideback' : 'slide'">
@@ -96,10 +100,10 @@
                         <p>為你打造理想的作品</p>
                     </div>
                 </div>
-            </div>
+            </section>
             
             <!-- services -->
-            <div class="m-services" id="services">
+            <section class="m-services" id="services">
                 <div class="l-container">
                     <h3 class="m-services__title" data-aos="fade-zoom-in"
                     data-aos-easing="ease-in-back"
@@ -130,36 +134,37 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
+            
             <!-- works -->
-            <div class="m-projects" id="projects">
+            <section class="m-works" id="works">
                 <div class="l-container"  data-aos="fade-up" data-aos-duration="1500">
-                    <h3 class="m-projects__title" >
-                        Our Projects
+                    <h3 class="m-works__title" >
+                        Our works
                     </h3>
-                    <div class="m-projects__imgs">
-                        <div class="m-projects__imgs-one">
+                    <div class="m-works__imgs">
+                        <div class="m-works__imgs-one">
                             <img src="img/project_1.jpg" alt="">
                         </div>
-                        <div class="m-projects__imgs-two">
+                        <div class="m-works__imgs-two">
                             <img src="img/project_2.jpg" alt="">
                         </div>
-                        <div class="m-projects__imgs-bottom">
-                            <div class="m-projects__imgs-bottom_three">
+                        <div class="m-works__imgs-bottom">
+                            <div class="m-works__imgs-bottom_three">
                                 <img src="img/project_3.jpg" alt="">
                             </div>
-                            <div class="m-projects__imgs-bottom_four">
+                            <div class="m-works__imgs-bottom_four">
                                 <img src="img/project_4.jpg" alt="">
                             </div>
                         </div>
                     </div>
-                    <a href="" class="m-projects__more">
+                    <a href="" class="m-works__more">
                         Click here to read more
                     </a>
                 </div>
-            </div>
+            </section>
             <!-- about us -->
-            <div class="m-about" id="about">
+            <section class="m-about" id="about">
                 <div class="l-container" data-aos="fade-up" data-aos-duration="1500">
                     <h3 class="m-about__title">
                         Asago
@@ -178,34 +183,34 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
             <!-- contact us -->
-            <div class="m-mail" id="mail">
+            <section class="m-contact" id="contact">
                 <div class="l-container" data-aos="fade-up" data-aos-duration="1500">
-                    <h3 class="m-mail__title">
+                    <h3 class="m-contact__title">
                         Mail Us
                     </h3>
-                    <p class="m-mail__detail">你有任何想法嗎？留下它，便能開啟我們的談話。</p>
-                    <ul class="m-mail__form">
-                        <li class="m-mail__form-item">
+                    <p class="m-contact__detail">你有任何想法嗎？留下它，便能開啟我們的談話。</p>
+                    <ul class="m-contact__form">
+                        <li class="m-contact__form-item">
                             <label class="label" for="name">如何稱呼你</label>
-                            <input class="m-mail__form-item_name" type="text" placeholder="Your name"  id="name" v-model="userName">
+                            <input class="m-contact__form-item_name" type="text" placeholder="Your name"  id="name" v-model="userName">
                         </li>
-                        <li class="m-mail__form-item">
+                        <li class="m-contact__form-item">
                             <label class="label" for="email" :class="{ erroLabel : isError }">{{ emailAlert }}</label>
-                            <input class="m-mail__form-item_email" type="email" name="" id="email" placeholder="Email" v-model="userEmail" @blur="blur" :class="{ erroInput : isError }">
+                            <input class="m-contact__form-item_email" type="email" name="" id="email" placeholder="Email" v-model="userEmail" @blur="blur" :class="{ erroInput : isError }">
                         </li>
-                        <li class="m-mail__form-item">
+                        <li class="m-contact__form-item">
                             <label class="label" for="message">訊息內容</label>
-                            <textarea class="m-mail__form-item_msg" placeholder="Leave your message here" id="message" v-model="userMsg"></textarea>
+                            <textarea class="m-contact__form-item_msg" placeholder="Leave your message here" id="message" v-model="userMsg"></textarea>
                         </li>
-                        <li class="m-mail__form-item">
-                            <input type="button" @click="sendData" class="m-mail__form-item_submit" :class="{ formCorrect : isCorrect }"  :disabled="isDisabledFn" value="Submit"></input>
+                        <li class="m-contact__form-item">
+                            <input type="button" @click="sendData" class="m-contact__form-item_submit" :class="{ formCorrect : isCorrect }"  :disabled="isDisabledFn" value="Submit"></input>
                         </li>
                     </ul>
                 </div>
-            </div>
+            </section>
             <!-- footer -->
             <footer class="l-footer">
                 <div class="l-footer__bg"></div>
