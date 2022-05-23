@@ -1086,7 +1086,6 @@ p {
 .m-works__imgs-bottom {
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: space-between;
   position: absolute;
   right: 0;
@@ -1114,6 +1113,7 @@ p {
 }
 .m-works__imgs-bottom_three {
   margin-right: 20px;
+  width: 31.77%;
 }
 @media screen and (max-width: 1024px) {
   .m-works__imgs-bottom_three {
@@ -1133,10 +1133,14 @@ p {
     width: 77.77vw;
   }
 }
+.m-works__imgs-bottom_four {
+  width: calc(68.23% - 20px);
+}
 @media screen and (max-width: 1024px) {
   .m-works__imgs-bottom_four {
     height: 100%;
     margin-bottom: 10px;
+    width: auto;
   }
 }
 @media screen and (max-width: 1024px) and (max-device-width: 1024px) and (orientation: landscape) {
