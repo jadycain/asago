@@ -581,7 +581,11 @@ p {
 }
 .m-opening__word-line {
   position: absolute;
-  bottom: -18px;
+  left: 50%;
+  transform: translate(-50%);
+}
+.m-opening__word-line path {
+  opacity: 0;
 }
 .m-opening__word-go {
   position: relative;
@@ -598,7 +602,7 @@ p {
 }
 
 .complete {
-  z-index: -1;
+  z-index: -50;
 }
 
 .m-pv {
